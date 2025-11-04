@@ -1,1 +1,13 @@
-Single_Tello_Test
+## So far the only test file which has been created is for running sequential commands on the drone.
+## You must be connected to the drone via wifi - turn on the drone and look for it's hotspot
+
+## Once connected you can run the command below and the drone will take off and do a formation:
+## (be in the arena when you do!!)
+
+python Single_Tello_Test/tello_test_py3.py
+
+## You can open that file and modify the "commands" list to add new commands. 
+## use the format in the tello sdk 1.3 : https://dl-cdn.ryzerobotics.com/downloads/tello/20180910/Tello%20SDK%20Documentation%20EN_1.3.pdf
+
+
+
