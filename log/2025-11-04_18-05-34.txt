@@ -1,0 +1,70 @@
+
+id: 0
+command: command
+response: b'ok'
+start time: 2025-11-04 18:05:34.155403
+end_time: 2025-11-04 18:05:34.208748
+duration: 0.053345
+
+id: 1
+command: takeoff
+response: b'ok'
+start time: 2025-11-04 18:05:34.208885
+end_time: 2025-11-04 18:05:41.636654
+duration: 7.427769
+
+id: 2
+command: forward 500
+response: b'ok'
+start time: 2025-11-04 18:05:41.636797
+end_time: 2025-11-04 18:05:47.648785
+duration: 6.011988
+
+id: 3
+command: cw 90
+response: b'ok'
+start time: 2025-11-04 18:05:47.649404
+end_time: 2025-11-04 18:05:49.918871
+duration: 2.269467
+
+id: 4
+command: forward 100
+response: b'ok'
+start time: 2025-11-04 18:05:49.919591
+end_time: 2025-11-04 18:05:52.393815
+duration: 2.474224
+
+id: 5
+command: cw 90
+response: b'ok'
+start time: 2025-11-04 18:05:52.394434
+end_time: 2025-11-04 18:05:54.628987
+duration: 2.234553
+
+id: 6
+command: forward 100
+response: b'ok'
+start time: 2025-11-04 18:05:54.629169
+end_time: 2025-11-04 18:05:57.014684
+duration: 2.385515
+
+id: 7
+command: cw 90
+response: b'ok'
+start time: 2025-11-04 18:05:57.015071
+end_time: 2025-11-04 18:05:59.106496
+duration: 2.091425
+
+id: 8
+command: forward 100
+response: b'ok'
+start time: 2025-11-04 18:05:59.106859
+end_time: 2025-11-04 18:06:02.104512
+duration: 2.997653
+
+id: 9
+command: land
+response: b'ok'
+start time: 2025-11-04 18:06:02.104936
+end_time: 2025-11-04 18:06:04.810704
+duration: 2.705768

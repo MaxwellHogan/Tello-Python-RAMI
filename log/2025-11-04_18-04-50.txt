@@ -1,0 +1,77 @@
+
+id: 0
+command: command
+response: b'ok'
+start time: 2025-11-04 18:04:50.853779
+end_time: 2025-11-04 18:04:50.910381
+duration: 0.056602
+
+id: 1
+command: takeoff
+response: b'ok'
+start time: 2025-11-04 18:04:50.910513
+end_time: 2025-11-04 18:04:59.538752
+duration: 8.628239
+
+id: 2
+command: ccw 90
+response: b'ok'
+start time: 2025-11-04 18:04:59.538926
+end_time: 2025-11-04 18:05:01.709141
+duration: 2.170215
+
+id: 3
+command: forward 500
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:01.709725
+end_time: 2025-11-04 18:05:06.717423
+duration: 5.007698
+
+id: 4
+command: cw 90
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:06.717623
+end_time: 2025-11-04 18:05:06.826024
+duration: 0.108401
+
+id: 5
+command: forward 100
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:06.826189
+end_time: 2025-11-04 18:05:06.935066
+duration: 0.108877
+
+id: 6
+command: cw 90
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:06.935205
+end_time: 2025-11-04 18:05:07.027753
+duration: 0.092548
+
+id: 7
+command: forward 100
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:07.028347
+end_time: 2025-11-04 18:05:07.120413
+duration: 0.092066
+
+id: 8
+command: cw 90
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:07.120789
+end_time: 2025-11-04 18:05:07.230082
+duration: 0.109293
+
+id: 9
+command: forward 100
+response: b'error Motor stop'
+start time: 2025-11-04 18:05:07.230941
+end_time: 2025-11-04 18:05:07.338376
+duration: 0.107435
+
+id: 10
+command: land
+response: b'error'
+start time: 2025-11-04 18:05:07.338504
+end_time: 2025-11-04 18:05:07.433559
+duration: 0.095055

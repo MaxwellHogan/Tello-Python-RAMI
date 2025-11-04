@@ -1,0 +1,35 @@
+
+id: 0
+command: command
+response: b'ok'
+start time: 2025-11-04 14:51:10.032041
+end_time: 2025-11-04 14:51:10.094503
+duration: 0.062462
+
+id: 1
+command: takeoff
+response: b'ok'
+start time: 2025-11-04 14:51:10.094667
+end_time: 2025-11-04 14:51:16.825667
+duration: 6.731
+
+id: 2
+command: forward 50
+response: b'ok'
+start time: 2025-11-04 14:51:16.825993
+end_time: 2025-11-04 14:51:18.926433
+duration: 2.10044
+
+id: 3
+command: cw 90
+response: b'ok'
+start time: 2025-11-04 14:51:18.927251
+end_time: 2025-11-04 14:51:21.055771
+duration: 2.12852
+
+id: 4
+command: land
+response: b'ok'
+start time: 2025-11-04 14:51:21.055910
+end_time: 2025-11-04 14:51:24.726036
+duration: 3.670126

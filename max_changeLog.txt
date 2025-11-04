@@ -1,0 +1,2 @@
+1. updated parts of the python code to be python 3 instead of python 2
+2. created tello_test_py3 to work in, deleted old tello_test
