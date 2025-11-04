@@ -31,6 +31,7 @@ if __name__ == "__main__":
         while True:
             index += 1
             response, ip = socket.recvfrom(1024)
+            print(type(response))
             if response == 'ok':
                 continue
             out = response.replace(';', ';\n')
