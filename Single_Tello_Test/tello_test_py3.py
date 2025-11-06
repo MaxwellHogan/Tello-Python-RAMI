@@ -10,16 +10,9 @@ def main():
     commands = [
         "command",
         "takeoff",
-        "forward 450.6",
-        "cw 90",
         "forward 100",
-        "cw 90",
+        "ccw 180",
         "forward 100",
-        "cw 90",
-        "flip r",
-        "forward 100",
-        "ccw 90",
-        "forward 300",
         "ccw 180",
         "land",
     ]

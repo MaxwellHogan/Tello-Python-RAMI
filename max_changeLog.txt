@@ -1,2 +1,5 @@
 1. updated parts of the python code to be python 3 instead of python 2
 2. created tello_test_py3 to work in, deleted old tello_test
+3. Tom's path planning code was implemented and tested - not with the real envirnment yet.
+4. Created img_prossing_development folder which stores the test code for running the checkerboard detection
+5. added docker file and bat file to launch it. 
