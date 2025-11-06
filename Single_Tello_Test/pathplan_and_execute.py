@@ -248,7 +248,8 @@ def main():
     except Exception:
         pass
 
-    commands = []
+    commands = ["command",
+                "takeoff",]
     current_yaw = 0.0
     for i in range(len(path_xy)):
         if i == 0:
@@ -256,19 +257,23 @@ def main():
         else:
             x0, y0 = path_xy[i-1]
         x1, y1 = path_xy[i]
-        dist = str(math.hypot(x1 - x0, y1 - y0))
+        dist = math.hypot(x1 - x0, y1 - y0)
         angle = math.degrees(math.atan2(y1 - y0, x1 - x0))
         turn = angle - current_yaw 
         current_yaw += turn
-        commands.append("cw " + str(turn))
-        commands.append("forward " + dist)
+        commands.append("cw {:.4f}".format(turn))
+        commands.append("forward {:.4f}".format(dist))
 
     return_to_yaw = True  
     if return_to_yaw:
-        commands.append("cw " + str(-current_yaw))
+        commands.append("cw {:.4f}".format(-current_yaw))
 
+
+    commands.append("land")
     print("Tello commands:")
     print(commands)
+
+
         
 
     # Initialize Tello
