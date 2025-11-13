@@ -1,0 +1,7 @@
+/app/Tello_Video/h264decoder/build/CMakeFiles/h264decoder.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/edit_cache.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/rebuild_cache.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/list_install_components.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/install.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/install/local.dir
+/app/Tello_Video/h264decoder/build/CMakeFiles/install/strip.dir

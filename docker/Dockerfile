@@ -9,6 +9,18 @@ ENV DEBIAN_FRONTEND=noninteractive
 # -------------------------------
 # 1. System dependencies
 # -------------------------------
+
+RUN apt-get update -y 
+RUN apt-get install -y software-properties-common -y
+RUN add-apt-repository universe -y
+RUN apt-get update -y
+
+RUN apt-get install libboost-all-dev -y
+RUN apt-get install libavcodec-dev -y
+RUN apt-get install libswscale-dev -y
+RUN apt-get install -y python3-tk -y
+RUN apt-get install iputils-ping -y
+
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \

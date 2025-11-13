@@ -1,40 +1,68 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.12)
 project(python_h264decoder)
 
-set(Python_ADDITIONAL_VERSIONS 2.7)
-
+# Detect platform
 if(UNIX AND NOT APPLE)
-        set(LINUX TRUE)
+    set(LINUX TRUE)
 endif()
 
-if(APPLE)
-	set(CMAKE_SHARED_LIBRARY_SUFFIX ".so")
-	find_package(Boost REQUIRED COMPONENTS python27)
-elseif(LINUX)
-	find_package(Boost REQUIRED COMPONENTS "python")
-endif(APPLE)
+# -------------------------------
+# Python 3 setup
+# -------------------------------
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+message(STATUS "Using Python include dir: ${Python3_INCLUDE_DIRS}")
+message(STATUS "Using Python libraries  : ${Python3_LIBRARIES}")
 
+# -------------------------------
+# Boost (Python bindings)
+# -------------------------------
+# You have libboost_python38, so we use that component
+find_package(Boost REQUIRED COMPONENTS python38)
+message(STATUS "Using Boost include dir : ${Boost_INCLUDE_DIRS}")
+message(STATUS "Using Boost libraries   : ${Boost_LIBRARIES}")
 
-
-find_package(PythonInterp 2.7 REQUIRED)
-find_package(PythonLibs 2.7 REQUIRED )
-
-
-include_directories(${PYTHON_INCLUDE_DIRS})
+# -------------------------------
+# Include and link directories
+# -------------------------------
+include_directories(${Python3_INCLUDE_DIRS})
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
 
-add_compile_options ("-std=c++0x")
+# -------------------------------
+# Compiler setup
+# -------------------------------
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(h264decoder SHARED h264decoder.cpp h264decoder_python.cpp)
+# -------------------------------
+# Build the shared library
+# -------------------------------
+add_library(h264decoder SHARED
+    h264decoder.cpp
+    h264decoder_python.cpp
+)
 
-if(APPLE)
-	target_link_libraries(h264decoder avcodec swscale avutil ${Boost_LIBRARIES} ${Boost_PYTHON_LIBRARY_RELEASE} ${PYTHON_LIBRARIES})
-elseif(LINUX)
-	target_link_libraries(h264decoder avcodec swscale avutil ${Boost_PYTHON_LIBRARY_RELEASE} ${PYTHON_LIBRARIES})
-endif(APPLE)
+# -------------------------------
+# Link the necessary libraries
+# -------------------------------
+target_link_libraries(h264decoder
+    avcodec
+    swscale
+    avutil
+    ${Boost_LIBRARIES}
+    ${Python3_LIBRARIES}
+)
 
+# -------------------------------
+# Create symbolic link after build
+# -------------------------------
 add_custom_command(TARGET h264decoder POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E create_symlink 
-                   ${CMAKE_BINARY_DIR}/libh264decoder.so ${CMAKE_SOURCE_DIR}/libh264decoder.so)
+    COMMAND ${CMAKE_COMMAND} -E create_symlink
+    ${CMAKE_BINARY_DIR}/libh264decoder.so
+    ${CMAKE_SOURCE_DIR}/libh264decoder.so
+)
+
+# -------------------------------
+# Install target
+# -------------------------------
 install(TARGETS h264decoder LIBRARY DESTINATION .)

@@ -13,7 +13,8 @@ echo Starting container "%CONTAINER_NAME%" from image "%IMAGE_NAME%"
 
 docker run -it --rm ^
     --name %CONTAINER_NAME% ^
-    --network host ^
+    -p 8889:8889/udp ^
+    -p 11111:11111/udp ^
     -e DISPLAY=host.docker.internal:0 ^
     -v "C:\dji_tello\Tello-Python":/app ^
     %IMAGE_NAME%

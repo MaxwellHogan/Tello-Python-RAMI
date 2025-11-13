@@ -1,10 +1,3 @@
-#!/bin/sh
-
-echo 'Compiling and Installing the Tello Video Stream module'
-echo 'You might need to enter your password'
-
-cd .. 
-cd ..
 sudo apt-get update -y
 
 # install python 2.7
@@ -22,19 +15,22 @@ sudo apt-get update -y
 sudo pip install cmake
 
 # install dependencies
-sudo apt-get install libboost-all-dev -y
-sudo apt-get install libavcodec-dev -y
-sudo apt-get install libswscale-dev -y
-sudo apt-get install python-numpy -y
-sudo apt-get install python-matplotlib -y
-sudo pip install opencv-python
-sudo apt-get install python-imaging-tk
+
+apt-get update
+apt-get install -y software-properties-common
+add-apt-repository universe
+apt-get update
+
+apt-get install libboost-all-dev -y
+apt-get install libavcodec-dev -y
+apt-get install libswscale-dev -y
+apt-get install -y python3-tk
 
 # pull and build h264 decoder library
 cd h264decoder
 mkdir build
 cd build
-cmake ..
+cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make
 
 # copy source .so file to tello.py directory

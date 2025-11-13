@@ -21,3 +21,15 @@ docker build -t tello-dev -f docker/Dockerfile .
 ### for running the checkerboard test:
 cd img_prossing_development
 python3 checker_detect.py
+
+
+## pushing to git:
+git add .
+git commit -m "replace with note on changes"
+git push -u origin main
+
+
+## running the video example:
+cd Tello_Video
+ln -s h264decoder/libh264decoder.so libh264decoder.so
+python3 main.py

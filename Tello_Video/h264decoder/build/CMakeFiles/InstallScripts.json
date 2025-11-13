@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/app/Tello_Video/h264decoder/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

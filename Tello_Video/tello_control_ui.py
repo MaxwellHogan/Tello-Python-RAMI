@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageTk
-import Tkinter as tki
-from Tkinter import Toplevel, Scale
+import tkinter as tki
+from tkinter import Toplevel, Scale
 import threading
 import datetime
 import cv2
@@ -97,8 +97,8 @@ class TelloUI:
                     thread_tmp = threading.Thread(target=self._updateGUIImage,args=(image,))
                     thread_tmp.start()
                     time.sleep(0.03)                                                            
-        except RuntimeError, e:
-            print("[INFO] caught a RuntimeError")
+        except RuntimeError as e:
+            print(f"[INFO] caught a RuntimeError:\n{e}")
 
            
     def _updateGUIImage(self,image):
@@ -304,42 +304,42 @@ class TelloUI:
 
     def updateDistancebar(self):
         self.distance = self.distance_bar.get()
-        print 'reset distance to %.1f' % self.distance
+        print('reset distance to %.1f' % self.distance)
 
     def updateDegreebar(self):
         self.degree = self.degree_bar.get()
-        print 'reset distance to %d' % self.degree
+        print('reset distance to %d' % self.degree)
 
     def on_keypress_w(self, event):
-        print "up %d m" % self.distance
+        print("up %d m" % self.distance)
         self.telloUp(self.distance)
 
     def on_keypress_s(self, event):
-        print "down %d m" % self.distance
+        print("down %d m" % self.distance)
         self.telloDown(self.distance)
 
     def on_keypress_a(self, event):
-        print "ccw %d degree" % self.degree
+        print("ccw %d degree" % self.degree)
         self.tello.rotate_ccw(self.degree)
 
     def on_keypress_d(self, event):
-        print "cw %d m" % self.degree
+        print("cw %d m" % self.degree)
         self.tello.rotate_cw(self.degree)
 
     def on_keypress_up(self, event):
-        print "forward %d m" % self.distance
+        print("forward %d m" % self.distance)
         self.telloMoveForward(self.distance)
 
     def on_keypress_down(self, event):
-        print "backward %d m" % self.distance
+        print("backward %d m" % self.distance)
         self.telloMoveBackward(self.distance)
 
     def on_keypress_left(self, event):
-        print "left %d m" % self.distance
+        print("left %d m" % self.distance)
         self.telloMoveLeft(self.distance)
 
     def on_keypress_right(self, event):
-        print "right %d m" % self.distance
+        print("right %d m" % self.distance)
         self.telloMoveRight(self.distance)
 
     def on_keypress_enter(self, event):

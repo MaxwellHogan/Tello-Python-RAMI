@@ -3,3 +3,4 @@
 3. Tom's path planning code was implemented and tested - not with the real envirnment yet.
 4. Created img_prossing_development folder which stores the test code for running the checkerboard detection
 5. added docker file and bat file to launch it. 
+6. modified the image decoder from python 2 to python 3 <- real work 
