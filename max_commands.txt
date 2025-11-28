@@ -19,8 +19,7 @@ docker build -t tello-dev -f docker/Dockerfile .
 ./launch_docker.bat
 
 ### for running the checkerboard test:
-cd img_prossing_development
-python3 checker_detect.py
+cd img_prossing_development && python3 checker_detect.py
 
 
 ## pushing to git:

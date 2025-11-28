@@ -20,7 +20,7 @@ blur = cv2.GaussianBlur(gray, (5, 5), 0)
 # 4. The remaining corners are sorted by the quality measure in the descending order.
 # 5. throws away each corner for which there is a stronger corner at a distance less than "maxDistance".
 corners = cv2.goodFeaturesToTrack(
-    gray, maxCorners=200, qualityLevel=0.05, minDistance=10, useHarrisDetector=True
+    gray, maxCorners=200, qualityLevel=0.05, minDistance=10
 )
 corners = np.int0(corners) if corners is not None else []
 
