@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Projects\Task_1_EPM110\Project_2\Tello-Python-RAMI\Tello_Video\h264decoder\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Projects\Task_1_EPM110\Project_2\Tello-Python-RAMI\Tello_Video\h264decoder\build\Release\h264decoder.pyd</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Projects\Task_1_EPM110\Project_2\Tello-Python-RAMI\Tello_Video\h264decoder\build\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

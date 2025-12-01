@@ -2,7 +2,7 @@ import socket
 import threading
 import time
 import numpy as np
-import libh264decoder
+import h264decoder
 
 class Tello:
     """Wrapper class to interact with the Tello drone."""
@@ -22,7 +22,7 @@ class Tello:
         """
 
         self.abort_flag = False
-        self.decoder = libh264decoder.H264Decoder()
+        self.decoder = h264decoder.H264Decoder()
         self.command_timeout = command_timeout
         self.imperial = imperial
         self.response = None  

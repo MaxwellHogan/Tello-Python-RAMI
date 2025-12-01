@@ -1,0 +1,10 @@
+^D:\PROJECTS\TASK_1_EPM110\PROJECT_2\TELLO-PYTHON-RAMI\TELLO_VIDEO\H264DECODER\BUILD\CMAKEFILES\8383CAAB0A4B32737CD722174AFD9CD3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Projects/Task_1_EPM110/Project_2/Tello-Python-RAMI/Tello_Video/h264decoder -BD:/Projects/Task_1_EPM110/Project_2/Tello-Python-RAMI/Tello_Video/h264decoder/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Projects/Task_1_EPM110/Project_2/Tello-Python-RAMI/Tello_Video/h264decoder/build/python_h264decoder.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

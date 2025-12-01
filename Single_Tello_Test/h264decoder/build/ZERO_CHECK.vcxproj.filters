@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects\Task_1_EPM110\Project_2\Tello-Python-RAMI\Tello_Video\h264decoder\build\CMakeFiles\8383caab0a4b32737cd722174afd9cd3\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{069FE25A-D9EA-355D-AB05-6D96BC189AE5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
