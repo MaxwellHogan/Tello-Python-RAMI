@@ -44,4 +44,4 @@ RUN pip3 install --no-cache-dir \
 # -------------------------------
 # 3. Default work directory
 # -------------------------------
-WORKDIR /app
+WORKDIR /workspace 
